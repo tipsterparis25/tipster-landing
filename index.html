@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <title>Tipster – Bons plans food étudiants à Paris</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta
+    name="description"
+    content="Tipster recense les menus étudiants & bons plans food à Paris, rue par rue, sur une carte simple à utiliser."
+  />
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-slate-950 text-slate-100 antialiased">
+  <!-- Navbar -->
+  <header class="sticky top-0 z-20 border-b border-white/10 bg-slate-950/80 backdrop-blur">
+    <nav class="mx-auto flex max-w-6xl items-center justify-between px-4 py-4">
+      <div class="flex items-center gap-2">
+        <div class="h-8 w-8 rounded-xl bg-gradient-to-tr from-lime-400 to-emerald-400 flex items-center justify-center text-slate-950 text-lg font-bold">
+          T
+        </div>
+        <span class="text-xl font-semibold tracking-tight">
+          tipster<span class="text-lime-400">.</span>
+        </span>
+      </div>
+
+      <div class="hidden items-center gap-6 text-sm md:flex">
+        <a href="#concept" class="hover:text-lime-300 transition">Concept</a>
+        <a href="#features" class="hover:text-lime-300 transition">Fonctionnalités</a>
+        <a href="#contribuer" class="hover:text-lime-300 transition">Contribuer</a>
+        <a href="#faq" class="hover:text-lime-300 transition">FAQ</a>
+        <a
+          href="#contribuer"
+          class="rounded-full border border-lime-400/70 px-4 py-1.5 text-xs font-medium text-lime-300 hover:bg-lime-400 hover:text-slate-950 transition"
+        >
+          Rejoindre la liste d’attente
+        </a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="mx-auto max-w-6xl px-4">
+    <!-- Hero -->
+    <section class="grid gap-12 py-16 md:grid-cols-2 md:py-20">
+      <div class="flex flex-col justify-center gap-6">
+        <p class="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-slate-200 w-fit">
+          🎓 Lancement à Paris – construit avec les étudiants
+        </p>
+
+        <h1 class="text-3xl font-semibold leading-tight sm:text-4xl lg:text-5xl">
+          Marre de payer
+          <span class="text-lime-400 font-bold">14&nbsp;€</span>
+          ton dej tous les midis à Paris&nbsp;?
+        </h1>
+
+        <p class="text-sm text-slate-300 sm:text-base">
+          Tipster recense les <span class="font-semibold text-lime-300">menus étudiants & bons plans food</span>
+          autour de ton campus, sur une carte simple à utiliser.
+        </p>
+
+        <div class="flex flex-col gap-3 sm:flex-row sm:items-center">
+          <a
+            href="#contribuer"
+            class="inline-flex items-center justify-center rounded-full bg-lime-400 px-6 py-2 text-sm font-semibold text-slate-950 shadow-lg shadow-lime-400/30 hover:bg-lime-300 transition"
+          >
+            🚨 Répondre au questionnaire (1 min)
+          </a>
+          <a
+            href="#contribuer"
+            class="inline-flex items-center justify-center rounded-full border border-white/20 px-6 py-2 text-sm font-medium text-slate-100 hover:border-lime-300 hover:text-lime-300 transition"
+          >
+            Rejoindre la liste d’attente
+          </a>
+        </div>
+
+        <p class="text-xs text-slate-400">
+          Aucune pub, aucun spam. Juste les infos pour ne plus exploser ton budget dej.
+        </p>
+      </div>
+
+      <!-- Mockup téléphone -->
+      <div class="flex items-center justify-center">
+        <div class="relative">
+          <div
+            class="mx-auto h-[480px] w-[260px] rounded-[2.5rem] border border-white/10 bg-slate-900/90 p-4 shadow-2xl shadow-lime-400/10"
+          >
+            <!-- Notch -->
+            <div class="mx-auto mb-4 h-6 w-32 rounded-full bg-slate-800"></div>
+
+            <!-- Header app -->
+            <div class="flex items-center justify-between text-xs text-slate-300 mb-3">
+              <span class="font-medium">Paris 5 – Jussieu</span>
+              <span class="rounded-full bg-white/5 px-2 py-0.5 text-[10px]">
+                ⩽ 8&nbsp;€
+              </span>
+            </div>
+
+            <!-- Mini carte -->
+            <div class="mb-4 h-28 rounded-2xl bg-gradient-to-tr from-slate-800 to-slate-700 relative overflow-hidden">
+              <div class="absolute inset-0 opacity-20">
+                <div class="h-full w-full bg-[radial-gradient(circle,_white_1px,_transparent_1px)] bg-[size:16px_16px]"></div>
+              </div>
+              <!-- Pins -->
+              <div class="absolute left-10 top-6 h-6 w-6 rounded-full bg-lime-400/90 text-[11px] font-bold text-slate-950 flex items-center justify-center">
+                8€
+              </div>
+              <div class="absolute right-8 bottom-7 h-5 w-5 rounded-full bg-emerald-400/90 text-[10px] font-semibold text-slate-950 flex items-center justify-center">
+                7
+              </div>
+              <div class="absolute left-1/2 top-1/2 h-4 w-4 -translate-x-1/2 -translate-y-1/2 rounded-full border border-white/60 bg-slate-900/60"></div>
+            </div>
+
+            <!-- Liste restos -->
+            <div class="space-y-2 text-[11px]">
+              <div class="flex items-center justify-between rounded-xl bg-slate-800/80 px-3 py-2">
+                <div>
+                  <p class="font-semibold text-slate-50">Café du Campus</p>
+                  <p class="text-[10px] text-slate-300">Plat du jour étudiant • 6 min à pied</p>
+                </div>
+                <div class="text-right">
+                  <p class="font-semibold text-lime-300">7,90&nbsp;€</p>
+                  <p class="text-[10px] text-slate-400">midi uniquement</p>
+                </div>
+              </div>
+
+              <div class="flex items-center justify-between rounded-xl bg-slate-800/60 px-3 py-2">
+                <div>
+                  <p class="font-semibold text-slate-50">Pasta Lab</p>
+                  <p class="text-[10px] text-slate-300">Menu étudiant • 9 min à pied</p>
+                </div>
+                <div class="text-right">
+                  <p class="font-semibold text-lime-300">8,50&nbsp;€</p>
+                  <p class="text-[10px] text-slate-400">végétarien dispo</p>
+                </div>
+              </div>
+
+              <div class="flex items-center justify-between rounded-xl border border-dashed border-slate-700 px-3 py-2">
+                <div>
+                  <p class="font-semibold text-slate-200">Ton spot préféré ici</p>
+                  <p class="text-[10px] text-slate-400">Partage-le avec Tipster</p>
+                </div>
+                <span class="rounded-full bg-lime-400/10 px-2 py-1 text-[9px] text-lime-300">
+                  Contribuer
+                </span>
+              </div>
+            </div>
+
+            <!-- Footer app -->
+            <div class="mt-4 flex items-center justify-between text-[10px] text-slate-400">
+              <span>Carte</span>
+              <span class="rounded-full bg-lime-400/15 px-3 py-1 text-lime-300 font-medium">Liste</span>
+              <span>Favoris</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section Concept -->
+    <section id="concept" class="space-y-4 py-12 border-t border-white/5">
+      <h2 class="text-2xl font-semibold">Comment ça va marcher concrètement&nbsp;?</h2>
+      <p class="max-w-2xl text-sm text-slate-300">
+        Une app pensée pour ta vraie vie d’étudiant, pas pour les pubs. Tu indiques où tu manges
+        et où tu étudies, Tipster te montre les bons plans autour, filtrés selon ton budget et ton temps.
+      </p>
+
+      <div class="mt-6 grid gap-4 md:grid-cols-3">
+        <div class="rounded-2xl border border-white/10 bg-white/5 p-4">
+          <p class="mb-2 text-xs font-semibold text-lime-300">1️⃣ Tu choisis ton quartier</p>
+          <p class="text-sm text-slate-200">
+            Fac, école, résidence, colocation… Tu indiques les rues où tu traînes vraiment.
+          </p>
+        </div>
+        <div class="rounded-2xl border border-white/10 bg-white/5 p-4">
+          <p class="mb-2 text-xs font-semibold text-lime-300">2️⃣ Tu découvres les bons plans</p>
+          <p class="text-sm text-slate-200">
+            Restos abordables, menus étudiants, snacks pas chers : tout est géolocalisé sur une mini-carte.
+          </p>
+        </div>
+        <div class="rounded-2xl border border-white/10 bg-white/5 p-4">
+          <p class="mb-2 text-xs font-semibold text-lime-300">3️⃣ Tu filtres selon ton budget</p>
+          <p class="text-sm text-slate-200">
+            “⩽ 8&nbsp;€” , “à moins de 10 min à pied”, “servi en −20 min” : tu vois ce qui colle à ta pause dej.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section Fonctionnalités -->
+    <section id="features" class="space-y-4 py-12 border-t border-white/5">
+      <h2 class="text-2xl font-semibold">Ce que tu trouveras sur Tipster</h2>
+
+      <div class="grid gap-4 md:grid-cols-2">
+        <div class="rounded-2xl border border-white/10 bg-white/5 p-4">
+          <p class="mb-2 text-sm font-semibold">
+            🧭 Mini-map des restos abordables
+          </p>
+          <p class="text-sm text-slate-200">
+            Une carte claire avec les spots triés pour les étudiants : pas besoin de scroller 20 minutes.
+          </p>
+        </div>
+
+        <div class="rounded-2xl border border-white/10 bg-white/5 p-4">
+          <p class="mb-2 text-sm font-semibold">
+            📍 Infos utiles en un coup d’œil
+          </p>
+          <p class="text-sm text-slate-200">
+            Prix, adresse, horaires, type de cuisine, options végé/vegan quand c’est dispo.
+          </p>
+        </div>
+
+        <div class="rounded-2xl border border-white/10 bg-white/5 p-4">
+          <p class="mb-2 text-sm font-semibold">
+            🎓 Focus rues & quartiers étudiants
+          </p>
+          <p class="text-sm text-slate-200">
+            Quartiers d’universités, écoles, résidences, bibliothèques : on cible là où tu vis et étudies.
+          </p>
+        </div>
+
+        <div class="rounded-2xl border border-white/10 bg-white/5 p-4">
+          <p class="mb-2 text-sm font-semibold">
+            ⭐ Recos par les étudiants
+          </p>
+          <p class="text-sm text-slate-200">
+            Notes, commentaires et tips laissés par les autres pour éviter les mauvaises surprises.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section Pourquoi -->
+    <section class="space-y-4 py-12 border-t border-white/5">
+      <h2 class="text-2xl font-semibold">Pourquoi on crée Tipster&nbsp;?</h2>
+      <div class="grid gap-6 md:grid-cols-[3fr,2fr]">
+        <div class="space-y-3 text-sm text-slate-200">
+          <p>
+            À Paris, manger dehors quand on est étudiant, ça pique vite : 12–15&nbsp;€ le midi, des
+            quartiers ultra chers, et des bons plans dispersés partout.
+          </p>
+          <p>Avec Tipster, on veut&nbsp;:</p>
+          <ul class="list-disc space-y-1 pl-5 text-slate-200">
+            <li>rendre les <span class="font-semibold">bons plans visibles et simples à trouver</span>,</li>
+            <li>aider les étudiants à <span class="font-semibold">tenir leur budget</span> sans manger mal,</li>
+            <li>mettre en avant les <span class="font-semibold">restos qui jouent le jeu</span> avec des prix corrects.</li>
+          </ul>
+          <p>
+            On commence petit, quartier par quartier, avec les étudiants qui acceptent de nous aider.
+          </p>
+        </div>
+
+        <div class="rounded-2xl border border-lime-400/40 bg-lime-400/5 p-4 text-sm text-slate-100">
+          <p class="mb-2 text-xs font-semibold uppercase tracking-wide text-lime-300">
+            Ce que tu peux faire maintenant
+          </p>
+          <p>
+            En 1 minute, tu peux nous dire dans quels quartiers tu es, partager tes spots préférés et
+            nous dire ce qui te manque aujourd’hui.
+          </p>
+          <p class="mt-3">
+            Plus on a de réponses, plus on peut prioriser les bons quartiers et les bons plans.
+          </p>
+          <a
+            href="#contribuer"
+            class="mt-4 inline-flex items-center justify-center rounded-full bg-lime-400 px-4 py-1.5 text-xs font-semibold text-slate-950 hover:bg-lime-300 transition"
+          >
+            Contribuer maintenant
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section Contribuer -->
+    <section id="contribuer" class="space-y-4 py-12 border-t border-white/5">
+      <h2 class="text-2xl font-semibold">Tu veux voir Tipster sortir plus vite&nbsp;?</h2>
+      <p class="max-w-2xl text-sm text-slate-300">
+        On a besoin de toi pour cartographier les rues où tu manges, étudies et traînes. Tu peux
+        soit remplir notre court formulaire, soit répondre au questionnaire complet.
+      </p>
+
+      <div class="grid gap-6 md:grid-cols-2">
+        <!-- Explication -->
+        <div class="space-y-3 text-sm text-slate-200">
+          <p>En 1 minute, tu peux&nbsp;:</p>
+          <ul class="list-disc space-y-1 pl-5">
+            <li>nous dire <span class="font-semibold">dans quels quartiers</span> tu es,</li>
+            <li>partager <span class="font-semibold">tes spots préférés</span>,</li>
+            <li>nous dire ce qui te manque aujourd’hui.</li>
+          </ul>
+          <p>
+            Plus on a de réponses, plus on peut prioriser les quartiers et sortir une version utile
+            dès le début.
+          </p>
+        </div>
+
+        <!-- Formulaire simple (placeholder) -->
+        <div class="rounded-2xl border border-white/10 bg-white/5 p-4 text-sm">
+          <div class="space-y-3">
+            <div>
+              <label class="mb-1 block text-xs text-slate-300">Prénom</label>
+              <input
+                type="text"
+                class="w-full rounded-lg border border-white/10 bg-slate-900/80 px-3 py-2 text-xs outline-none focus:border-lime-300"
+                placeholder="Ex : Léa"
+              />
+            </div>
+            <div>
+              <label class="mb-1 block text-xs text-slate-300">Quartier / Campus</label>
+              <input
+                type="text"
+                class="w-full rounded-lg border border-white/10 bg-slate-900/80 px-3 py-2 text-xs outline-none focus:border-lime-300"
+                placeholder="Ex : Paris 5 – Jussieu"
+              />
+            </div>
+            <div>
+              <label class="mb-1 block text-xs text-slate-300">Email (pour l’accès en avant-première)</label>
+              <input
+                type="email"
+                class="w-full rounded-lg border border-white/10 bg-slate-900/80 px-3 py-2 text-xs outline-none focus:border-lime-300"
+                placeholder="ton.email@exemple.fr"
+              />
+            </div>
+            <button
+              class="mt-2 w-full rounded-full bg-lime-400 px-4 py-2 text-xs font-semibold text-slate-950 hover:bg-lime-300 transition"
+            >
+              Envoyer & rejoindre la liste d’attente
+            </button>
+
+            <p class="pt-2 text-[11px] text-slate-400">
+              🔗 Tu peux aussi répondre au
+              <span class="font-semibold text-lime-300">questionnaire complet (1 min)</span>
+              via le lien que tu retrouveras en bio / description.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="space-y-4 py-12 border-t border-white/5">
+      <h2 class="text-2xl font-semibold">FAQ</h2>
+
+      <div class="space-y-4 text-sm text-slate-200">
+        <div>
+          <p class="font-semibold">L’app est déjà disponible&nbsp;?</p>
+          <p class="text-slate-300">
+            Pas encore. On est en phase de repérage et de co-construction avec des étudiants
+            parisiens. L’idée : lancer une première version dans les quartiers les plus demandés.
+          </p>
+        </div>
+
+        <div>
+          <p class="font-semibold">Tipster sera payant&nbsp;?</p>
+          <p class="text-slate-300">
+            Non pour les étudiants. L’accès à la carte restera gratuit. Notre modèle économique
+            viendra plus tard, côté partenaires / restos.
+          </p>
+        </div>
+
+        <div>
+          <p class="font-semibold">C’est dispo seulement à Paris&nbsp;?</p>
+          <p class="text-slate-300">
+            On commence par Paris (quartiers étudiants en priorité). Si le concept fonctionne bien,
+            on étendra à d’autres villes étudiantes.
+          </p>
+        </div>
+
+        <div>
+          <p class="font-semibold">Je suis restaurateur, je peux apparaître sur Tipster&nbsp;?</p>
+          <p class="text-slate-300">
+            Oui. On cherche des partenaires qui proposent des prix justes pour les étudiants.
+            Une section dédiée restaurateurs arrivera bientôt. En attendant, tu peux nous contacter
+            via les réseaux ou par email.
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="border-t border-white/10 bg-slate-950/90">
+    <div class="mx-auto flex max-w-6xl flex-col gap-3 px-4 py-6 text-xs text-slate-500 sm:flex-row sm:items-center sm:justify-between">
+      <div class="flex items-center gap-2">
+        <span class="text-sm font-semibold text-slate-100">
+          tipster<span class="text-lime-400">.</span>
+        </span>
+        <span>Fait avec et pour les étudiants.</span>
+      </div>
+      <div class="flex flex-wrap gap-3">
+        <span>Contact</span>
+        <span>Questionnaire étudiants</span>
+        <span>Formulaire restos</span>
+        <span>Instagram / TikTok</span>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
