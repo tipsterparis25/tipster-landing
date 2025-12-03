@@ -16,9 +16,12 @@
   <header class="sticky top-0 z-20 border-b border-white/10 bg-slate-950/80 backdrop-blur">
     <nav class="mx-auto flex max-w-6xl items-center justify-between px-4 py-4">
       <div class="flex items-center gap-2">
-        <div class="h-8 w-8 rounded-xl bg-gradient-to-tr from-lime-400 to-emerald-400 flex items-center justify-center text-slate-950 text-lg font-bold">
-          T
-        </div>
+        <!-- Logo Tipster -->
+        <img
+          src="tipster-logo.png"
+          alt="Logo Tipster"
+          class="h-8 w-auto"
+        />
         <span class="text-xl font-semibold tracking-tight">
           tipster<span class="text-lime-400">.</span>
         </span>
@@ -59,8 +62,11 @@
         </p>
 
         <div class="flex flex-col gap-3 sm:flex-row sm:items-center">
+          <!-- Bouton vers questionnaire Google Forms -->
           <a
-            href="#contribuer"
+            href="https://forms.gle/Sg5qxVhJZuwSBJBs8"
+            target="_blank"
+            rel="noopener noreferrer"
             class="inline-flex items-center justify-center rounded-full bg-lime-400 px-6 py-2 text-sm font-semibold text-slate-950 shadow-lg shadow-lime-400/30 hover:bg-lime-300 transition"
           >
             🚨 Répondre au questionnaire (1 min)
@@ -95,16 +101,18 @@
               </span>
             </div>
 
-            <!-- Mini carte -->
-            <div class="mb-4 h-28 rounded-2xl bg-gradient-to-tr from-slate-800 to-slate-700 relative overflow-hidden">
-              <div class="absolute inset-0 opacity-20">
-                <div class="h-full w-full bg-[radial-gradient(circle,_white_1px,_transparent_1px)] bg-[size:16px_16px]"></div>
-              </div>
+            <!-- Mini carte avec image réelle -->
+            <div class="mb-4 h-28 rounded-2xl relative overflow-hidden">
+              <img
+                src="tipster-mini-map.png"
+                alt="Mini carte Tipster autour du campus"
+                class="h-full w-full object-cover"
+              />
               <!-- Pins -->
-              <div class="absolute left-10 top-6 h-6 w-6 rounded-full bg-lime-400/90 text-[11px] font-bold text-slate-950 flex items-center justify-center">
+              <div class="absolute left-10 top-6 h-6 w-6 rounded-full bg-lime-400/90 text-[11px] font-bold text-slate-950 flex items-center justify-center shadow-md shadow-slate-900/60">
                 8€
               </div>
-              <div class="absolute right-8 bottom-7 h-5 w-5 rounded-full bg-emerald-400/90 text-[10px] font-semibold text-slate-950 flex items-center justify-center">
+              <div class="absolute right-8 bottom-7 h-5 w-5 rounded-full bg-emerald-400/90 text-[10px] font-semibold text-slate-950 flex items-center justify-center shadow-md shadow-slate-900/60">
                 7
               </div>
               <div class="absolute left-1/2 top-1/2 h-4 w-4 -translate-x-1/2 -translate-y-1/2 rounded-full border border-white/60 bg-slate-900/60"></div>
@@ -275,7 +283,7 @@
       <h2 class="text-2xl font-semibold">Tu veux voir Tipster sortir plus vite&nbsp;?</h2>
       <p class="max-w-2xl text-sm text-slate-300">
         On a besoin de toi pour cartographier les rues où tu manges, étudies et traînes. Tu peux
-        soit remplir notre court formulaire, soit répondre au questionnaire complet.
+        soit nous envoyer un mail avec tes infos, soit répondre au questionnaire complet.
       </p>
 
       <div class="grid gap-6 md:grid-cols-2">
@@ -293,43 +301,56 @@
           </p>
         </div>
 
-        <!-- Formulaire simple (placeholder) -->
+        <!-- Bloc "formulaire" + mailto -->
         <div class="rounded-2xl border border-white/10 bg-white/5 p-4 text-sm">
           <div class="space-y-3">
+            <p class="text-xs text-slate-300">
+              Tu peux t’inspirer de ces champs pour ton message :
+            </p>
             <div>
-              <label class="mb-1 block text-xs text-slate-300">Prénom</label>
-              <input
-                type="text"
-                class="w-full rounded-lg border border-white/10 bg-slate-900/80 px-3 py-2 text-xs outline-none focus:border-lime-300"
-                placeholder="Ex : Léa"
-              />
+              <p class="mb-1 block text-xs text-slate-300">Prénom</p>
+              <div
+                class="w-full rounded-lg border border-white/10 bg-slate-900/40 px-3 py-2 text-xs text-slate-500"
+              >
+                Ex : Léa
+              </div>
             </div>
             <div>
-              <label class="mb-1 block text-xs text-slate-300">Quartier / Campus</label>
-              <input
-                type="text"
-                class="w-full rounded-lg border border-white/10 bg-slate-900/80 px-3 py-2 text-xs outline-none focus:border-lime-300"
-                placeholder="Ex : Paris 5 – Jussieu"
-              />
+              <p class="mb-1 block text-xs text-slate-300">Quartier / Campus</p>
+              <div
+                class="w-full rounded-lg border border-white/10 bg-slate-900/40 px-3 py-2 text-xs text-slate-500"
+              >
+                Ex : Paris 5 – Jussieu
+              </div>
             </div>
             <div>
-              <label class="mb-1 block text-xs text-slate-300">Email (pour l’accès en avant-première)</label>
-              <input
-                type="email"
-                class="w-full rounded-lg border border-white/10 bg-slate-900/80 px-3 py-2 text-xs outline-none focus:border-lime-300"
-                placeholder="ton.email@exemple.fr"
-              />
+              <p class="mb-1 block text-xs text-slate-300">Tes bons plans / besoins</p>
+              <div
+                class="w-full rounded-lg border border-white/10 bg-slate-900/40 px-3 py-2 text-xs text-slate-500"
+              >
+                Ex : “Je vais souvent à …, j’aimerais trouver des menus &lt; 9 € autour de …”
+              </div>
             </div>
-            <button
-              class="mt-2 w-full rounded-full bg-lime-400 px-4 py-2 text-xs font-semibold text-slate-950 hover:bg-lime-300 transition"
+
+            <!-- Bouton qui envoie un mail -->
+            <a
+              href="mailto:tipster.paris25@gmail.com?subject=Contribution%20Tipster&body=Bonjour%20Tipster%2C%0A%0AJe%20souhaite%20contribuer%20au%20recensement%20des%20bons%20plans.%0A%0APr%C3%A9nom%20%3A%20%0AQuartier%20/%20campus%20%3A%20%0AMes%20bons%20plans%20/%20besoins%20%3A%20%0A%0A%E2%98%85%20Tu%20peux%20compl%C3%A9ter%20ces%20lignes%20et%20envoyer.%0A"
+              class="mt-2 w-full inline-flex items-center justify-center rounded-full bg-lime-400 px-4 py-2 text-xs font-semibold text-slate-950 hover:bg-lime-300 transition"
             >
-              Envoyer & rejoindre la liste d’attente
-            </button>
+              Envoyer une contribution par mail
+            </a>
 
             <p class="pt-2 text-[11px] text-slate-400">
               🔗 Tu peux aussi répondre au
-              <span class="font-semibold text-lime-300">questionnaire complet (1 min)</span>
-              via le lien que tu retrouveras en bio / description.
+              <a
+                href="https://forms.gle/Sg5qxVhJZuwSBJBs8"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="font-semibold text-lime-300 underline underline-offset-2"
+              >
+                questionnaire complet (1 min)
+              </a>
+              si tu préfères.
             </p>
           </div>
         </div>
@@ -387,10 +408,21 @@
         <span>Fait avec et pour les étudiants.</span>
       </div>
       <div class="flex flex-wrap gap-3">
-        <span>Contact</span>
-        <span>Questionnaire étudiants</span>
-        <span>Formulaire restos</span>
-        <span>Instagram / TikTok</span>
+        <a
+          href="mailto:tipster.paris25@gmail.com"
+          class="hover:text-lime-300 transition"
+        >
+          Contact
+        </a>
+        <span>Formulaire restos (bientôt)</span>
+        <a
+          href="https://www.instagram.com/tipster.paris/"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="hover:text-lime-300 transition"
+        >
+          Instagram
+        </a>
       </div>
     </div>
   </footer>
