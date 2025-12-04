@@ -13,7 +13,7 @@
 </head>
 <body class="bg-slate-950 text-slate-100 antialiased">
   <!-- Navbar -->
-  <header class="sticky top-0 z-20 border-b border-white/10 bg-slate-950/80 backdrop-blur">
+  <header class="sticky top-0 z-20 border-b border-white/10 bg-slate-900/90 backdrop-blur">
     <nav class="mx-auto flex max-w-6xl items-center justify-between px-4 py-4">
       <div class="flex items-center gap-2">
         <!-- Logo Tipster -->
@@ -301,40 +301,43 @@
           </p>
         </div>
 
-        <!-- Bloc "formulaire" + mailto -->
+        <!-- Bloc formulaire + mailto -->
         <div class="rounded-2xl border border-white/10 bg-white/5 p-4 text-sm">
           <div class="space-y-3">
             <p class="text-xs text-slate-300">
-              Tu peux t’inspirer de ces champs pour ton message :
+              Tu peux remplir ces champs puis nous envoyer un mail :
             </p>
+
             <div>
-              <p class="mb-1 block text-xs text-slate-300">Prénom</p>
-              <div
-                class="w-full rounded-lg border border-white/10 bg-slate-900/40 px-3 py-2 text-xs text-slate-500"
-              >
-                Ex : Léa
-              </div>
-            </div>
-            <div>
-              <p class="mb-1 block text-xs text-slate-300">Quartier / Campus</p>
-              <div
-                class="w-full rounded-lg border border-white/10 bg-slate-900/40 px-3 py-2 text-xs text-slate-500"
-              >
-                Ex : Paris 5 – Jussieu
-              </div>
-            </div>
-            <div>
-              <p class="mb-1 block text-xs text-slate-300">Tes bons plans / besoins</p>
-              <div
-                class="w-full rounded-lg border border-white/10 bg-slate-900/40 px-3 py-2 text-xs text-slate-500"
-              >
-                Ex : “Je vais souvent à …, j’aimerais trouver des menus &lt; 9 € autour de …”
-              </div>
+              <label class="mb-1 block text-xs text-slate-300">Prénom</label>
+              <input
+                type="text"
+                class="w-full rounded-lg border border-white/10 bg-slate-900/80 px-3 py-2 text-xs text-slate-100 outline-none focus:border-lime-300"
+                placeholder="Ex : Léa"
+              />
             </div>
 
-            <!-- Bouton qui envoie un mail -->
+            <div>
+              <label class="mb-1 block text-xs text-slate-300">Quartier / Campus</label>
+              <input
+                type="text"
+                class="w-full rounded-lg border border-white/10 bg-slate-900/80 px-3 py-2 text-xs text-slate-100 outline-none focus:border-lime-300"
+                placeholder="Ex : Paris 5 – Jussieu"
+              />
+            </div>
+
+            <div>
+              <label class="mb-1 block text-xs text-slate-300">Tes bons plans / besoins</label>
+              <textarea
+                rows="3"
+                class="w-full rounded-lg border border-white/10 bg-slate-900/80 px-3 py-2 text-xs text-slate-100 outline-none focus:border-lime-300"
+                placeholder='Ex : "Je vais souvent à …, j’aimerais trouver des menus &lt; 9 € autour de …"'
+              ></textarea>
+            </div>
+
+            <!-- Bouton qui ouvre un mail -->
             <a
-              href="mailto:tipster.paris25@gmail.com?subject=Contribution%20Tipster&body=Bonjour%20Tipster%2C%0A%0AJe%20souhaite%20contribuer%20au%20recensement%20des%20bons%20plans.%0A%0APr%C3%A9nom%20%3A%20%0AQuartier%20/%20campus%20%3A%20%0AMes%20bons%20plans%20/%20besoins%20%3A%20%0A%0A%E2%98%85%20Tu%20peux%20compl%C3%A9ter%20ces%20lignes%20et%20envoyer.%0A"
+              href="mailto:tipster.paris25@gmail.com?subject=Contribution%20Tipster"
               class="mt-2 w-full inline-flex items-center justify-center rounded-full bg-lime-400 px-4 py-2 text-xs font-semibold text-slate-950 hover:bg-lime-300 transition"
             >
               Envoyer une contribution par mail
@@ -399,9 +402,14 @@
   </main>
 
   <!-- Footer -->
-  <footer class="border-t border-white/10 bg-slate-950/90">
+  <footer class="border-t border-white/10 bg-slate-900/90">
     <div class="mx-auto flex max-w-6xl flex-col gap-3 px-4 py-6 text-xs text-slate-500 sm:flex-row sm:items-center sm:justify-between">
       <div class="flex items-center gap-2">
+        <img
+          src="tipster-logo.png"
+          alt="Logo Tipster"
+          class="h-6 w-auto"
+        />
         <span class="text-sm font-semibold text-slate-100">
           tipster<span class="text-lime-400">.</span>
         </span>
@@ -410,11 +418,10 @@
       <div class="flex flex-wrap gap-3">
         <a
           href="mailto:tipster.paris25@gmail.com"
-          class="hover:text-lime-300 transition"
+          class="inline-flex items-center justify-center rounded-full border border-white/25 px-3 py-1 hover:border-lime-300 hover:text-lime-300 transition"
         >
           Contact
         </a>
-        <span>Formulaire restos (bientôt)</span>
         <a
           href="https://www.instagram.com/tipster.paris/"
           target="_blank"
